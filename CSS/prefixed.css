@@ -1,0 +1,174 @@
+
+    html { /*doc basefont*/
+        font-family:"Gotham",Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size:18px; /*equal to 100% or lem*/
+    }
+    .flex-container{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+        width:80%;
+        min-height:100%;
+        margin:0 auto;
+    }
+
+        header{
+            width:100%;
+            height: 170px;
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1;
+            background-color:#F2B1BD;
+        }
+
+        article.content{
+          width: 80%;
+          height: auto;
+          -webkit-box-ordinal-group: 6;
+              -ms-flex-order: 5;
+                  order: 5;
+        }
+        .content img{
+          width: 100%
+        }
+
+        nav{
+            width:100%;
+            height:3em;
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
+            background-color: rgba(186, 232, 235, 1.00);
+        }
+        .menuItem{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-pack:distribute;
+                justify-content:space-around;
+            width: 25%;
+            height: 3em;
+            float: left;
+            background-color: rgba(0, 0, 0, 1.00);
+            color: #FFF;
+        }
+
+        .menuItem:hover{
+            background-color: rgba(207, 174, 102, 1.00);
+        }
+
+
+         article{
+             position: static;
+             -webkit-box-ordinal-group: 4;
+                 -ms-flex-order: 3;
+                     order: 3;
+             -webkit-box-flex: 1;
+                 -ms-flex: 1 60%;
+                     flex: 1 60%;
+             background-color:#FFF;
+         }
+        .castle{
+		  width:33.3%;
+		  height: auto;
+
+		      }
+
+          .windMillS{
+            width:33.3%;
+            height:auto;}
+
+            .hobbitVille{
+              width: 33.3%;
+              height: auto;
+
+                        }
+          .review{
+		            width:70%;
+		            float:left;
+                height:12em;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                color: #91312A;
+
+		            }
+
+        .contentLeft {
+            -webkit-box-flex: 1;
+                -ms-flex: 1 20%;
+                    flex: 1 20%;
+            background-color:lightpink;
+            color: rgba(207, 174, 102, 1.00);
+        }
+         .contentRight{
+
+             -webkit-box-flex: 1;
+
+                 -ms-flex: 1 20%;
+
+                     flex: 1 20%;
+             background-color: rgba(228, 233, 206, 1.00);
+            display:none;
+        }
+        footer{
+            position: -webkit-sticky;
+            position: sticky;
+            width: 100%;
+            height:4em;
+            -webkit-box-ordinal-group:8;
+                -ms-flex-order:7;
+                    order:7;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            font-style: italic;
+            background-color: antiquewhite;
+        }
+
+          section{
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-ordinal-group:5;
+                -ms-flex-order:4;
+                    order:4;
+          }
+          section.div.image {
+            width: calc(33.3% - 10px);
+            margin:5px;
+          }
+
+        a:link,a:active,a:visited{
+            color: white;
+            text-decoration: none;
+          }
+            @media only screen and (max-width: 900px){
+                .flex-container{
+                  width: 100%;
+        }
+
+        }
+
+        .contentLeft, .contentRight{
+            display:none;
+        }
+
+        @media only screen and (max-width: 500px){
+            .flex-container{
+            width:100%
+
+        }
+    }
+    .contentLeft,.contentRight{
+      display:none;
+    }
